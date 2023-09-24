@@ -1,6 +1,6 @@
 # MyMusic
 
-link demo: http://php.lovestoblog.com/Project/Register/log_in.php
+link demo: http://php.lovestoblog.com/Project/Includes/index.php
 
 - Khi ta vào trang wed lần đầu, trang wed sẽ tự điều hướng chúng ta đến trang đăng nhập
 
