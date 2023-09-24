@@ -1,0 +1,420 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('photos/bg1.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    background-position: bottom center;
+    overflow: hidden;
+}
+
+
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    animation: container-cursor 1s linear infinite;
+    z-index: -1;
+}
+
+@keyframes container-cursor {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+
+
+    }
+
+    100% {
+
+
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+
+.cursor::before {
+    content: '';
+    position: absolute;
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.cursor::after {
+    content: '';
+    position: absolute;
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+
+.container_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    bottom: -30%;
+
+
+
+
+}
+
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+.form-control {
+    margin: 10px 15px 15px;
+    padding: 15px 0 15px 0;
+    font-size: 20px;
+    position: relative;
+    margin: 20px;
+    /* left: 110%; */
+    border-radius: 40px;
+    border: 1px;
+    left: 50%;
+    padding-left: 20px;
+
+}
+
+
+
+::placeholder {
+    color: #0f0c0c;
+    font-size: 30px;
+
+}
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    margin: 20px;
+    cursor: pointer;
+
+}
+
+.Menu img {
+    margin: 20px;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.Menu img:hover {
+    width: 50px;
+}
+
+.playControl {
+    width: 40%;
+
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.9);
+
+
+}
+
+.playControl img {
+
+    border-radius: 50%;
+}
+
+.control {
+
+    width: 80%;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}
+
+.control .btn {
+    color: #be8db2;
+    font-size: 20px;
+    width: 80%;
+    margin: 10px;
+    cursor: pointer;
+    /* display: flex;
+    text-align: center; */
+    /* background-color: transparent; */
+
+
+}
+
+
+#Name_song {
+    font-size: 40px;
+    color: #fff;
+}
+
+#author_song {
+    color: #fff;
+
+}
+
+
+.control .btn-toggle-play {
+
+    height: 40px;
+
+
+}
+
+.progress {
+    width: 100%;
+    height: 6px;
+    background: #be8db2;
+    margin: 10px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.list_song {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #fff;
+    z-index: 3;
+    margin-left: -150%;
+}
+
+.change_background {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #fff;
+    z-index: 10;
+    float: right;
+    margin-left: -150%;
+}
+
+.change_background form {
+    margin: 3%;
+    width: 80%;
+    height: 80%;
+    display: block;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: 1px 1px 20px rgba(164, 157, 157, 0.9);
+
+    /* margin-left: 0; */
+}
+
+.change_background img {
+    cursor: pointer;
+    width: 30%;
+    height: auto;
+    margin: 1%;
+    border-radius: 10px;
+}
+
+.change_background img:hover {
+    transform: scale(1.1);
+}
+
+.show_list {
+
+    margin-left: 0;
+}
+
+
+
+.list_song h1 {
+    margin: 20px;
+
+}
+
+.header_list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.header_list h1 {
+    margin: 30px;
+    font-size: 40px;
+}
+
+.exit {
+
+    position: absolute;
+    right: 6%;
+    top: 6%;
+}
+
+.exit img {
+    width: 40px;
+    height: 40px;
+
+    margin: 30px;
+    cursor: pointer;
+}
+
+
+.Album {
+    width: 80%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    background-color: #090707;
+    margin: 20px;
+    border-radius: 40px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #030f1a;
+    font-size: 30px;
+
+}
+
+.Album::-webkit-scrollbar {
+    display: none;
+}
+
+.list, .result_list {
+    width: 80%;
+    display: block;
+    margin: 30px;
+}
+
+.The_song , .The_song_search {
+
+    display: flex;
+    color: #090707;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid;
+    box-shadow: 0 0 20px rgba(245, 243, 243, 0.9);
+}
+
+.Ma_song, .Ma_song_search {
+    display: flex;
+    font-size: 0.5em;
+    justify-content: center;
+    margin: 20px 10px 10px 10px;
+    width: 10%;
+}
+
+.photo_song img,.photo_song_search img {
+    margin: 10px 5px 5px 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+
+
+}
+
+.name_song, .name_song_search {
+    margin: 10px 5px 5px 5px;
+    width: 50%;
+    font-size: 25px;
+}
+
+
+
+
+.result{
+    width: 60%;
+    min-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+    top: 2%;
+    z-index: 10;
+    overflow: auto;
+    box-shadow: 1px 1px 20px rgba(128, 120, 120, 0.9);
+    background-color: #0b0a0a;
+    border-radius: 40px;
+    margin-right: -150%;
+
+}
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.show{
+    margin-right: 0%;
+}
+
+.header_list_search{
+    display: flex;
+    flex-direction: row;
+    width: 110%;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 20%;
+    
+
+}
+
+.exit_search img{
+    position: relative;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   right:  0;
+cursor: pointer;
+}
+
+
+.img_background.clicked {
+    border: 5px solid red; /* Màu viền bạn muốn (ở đây là đỏ) */
+  }
+/* .list_search{
+    position: relative;
+    top: 5%;
+} */
