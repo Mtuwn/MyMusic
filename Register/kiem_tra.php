@@ -23,7 +23,7 @@
         echo "Đăng nhập thành công";
 
         session_start();
-        $_SESSION['user'] = $result_name;
+        $_SESSION['user'] = $result_name['Name'];
         header('location:../Includes/index.php');
     } else {
         header("location:log_in.php?error='Sai tài khoản hoặc mật khẩu'");
